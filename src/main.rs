@@ -7,6 +7,8 @@ fn read(y: bool){
         println!("true")}
 }
 
+
+
 fn quiz(){
     for i in 1..4{
     println!("How old is Miku?");
@@ -27,7 +29,7 @@ fn quiz(){
     println!("So you think she's {input}? huh?");
     if input == 16{
         println!("CORRECT!! Miku is super proud of you^^");
-        break;
+        return;
     }else if input == 19{
         println!("Corre- WAIT!NO! Not the software's age! HER age!!");
         continue;
@@ -45,9 +47,11 @@ fn quiz(){
         continue;
     }else{
         println!("MIKU IS NOT AN OLD LADY!!");
-        break;
+        return;
     }
-}
+        
+    }
+
 println!("You keep answering wrong. You need to better your Miku knowledge!!!")
 
 }
@@ -72,6 +76,38 @@ struct Vocaloid{
 }
 */
 
+fn favorite() {
+   
+    println!("Who's your favorite vocaloid??");
+    let mut input = String::new();
+
+    io::stdin()
+        .read_line(&mut input)
+        .expect("huhhh whaat");
+
+       let input: String = match input.trim().parse(){
+        Ok(String) => String,
+
+       };
+
+    
+    match input.as_str() {
+        "miku" => println!("I mean who doesn't love Miku^^ "),
+        "teto" => {println!("LAAAAAAARP jk Teto is great <3 But I do mean sm from Vocaloid"); favorite();},
+        "kaito" => println!("omg wanna be friends??"),
+        "meiko" => println!("Woa a rare one"),
+        "luka" => println!("Hmm are you oldgen?"),
+        "fukase" => println!("I know what you are"),
+        "len" => println!("ToT"),
+        "rin" => println!("The cuter one, true"),
+        "gumi" => println!("You stay winning"),
+        "rei" | "adachi rei" | "adachirei" => println!("Robotgirl yay!!"),
+        "nurserobot" | "taoti" | "nurserobottypet" | "ttchan" | "nurserobot type t" => println!("THE CORRECT ANSWER"),
+        _ => println!("Wow good answer! (Either you typed smth wrong or I didnt include a special answer for this one oops)"),
+        
+    }
+}
+
 
 fn main() {
     println!("Hello, world!");
@@ -86,7 +122,7 @@ fn main() {
 
     //quiz();
 
-    let mut len = Vocaloid {
+    /*let mut len = Vocaloid {
         name: String::from("Kagamine Len"),
         age: 14,
         item: String::from("a banana"),
@@ -101,6 +137,7 @@ fn main() {
         println!("{} is a cryptonloid",len.name);
     }else{
         return;
-    }
-
+    }*/
+    quiz();
+    //favorite();
 }
