@@ -139,5 +139,5 @@ fn main() {
         return;
     }*/
     quiz();
-    //favorite();
+    favorite();
 }
