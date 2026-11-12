@@ -29,7 +29,7 @@ fn quiz(){
     println!("So you think she's {input}? huh?");
     if input == 16{
         println!("CORRECT!! Miku is super proud of you^^");
-        break;
+        return;
     }else if input == 19{
         println!("Corre- WAIT!NO! Not the software's age! HER age!!");
         continue;
@@ -47,7 +47,7 @@ fn quiz(){
         continue;
     }else{
         println!("MIKU IS NOT AN OLD LADY!!");
-        break;
+        return;
     }
         
     }
@@ -141,5 +141,3 @@ fn main() {
     quiz();
     //favorite();
 }
-
-
